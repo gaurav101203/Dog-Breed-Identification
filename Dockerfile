@@ -13,5 +13,5 @@ RUN pip install --no-cache-dir tensorflow tf_keras numpy pandas tensorflow_hub f
 # Expose the port (optional, but good practice)
 EXPOSE 5000  
 
-# Run the app
-CMD ["gunicorn", "-w", "2", "app:app"]
+# Use the correct $PORT variable
+CMD exec gunicorn -w 4 -b 0.0.0.0:${PORT} app:app
