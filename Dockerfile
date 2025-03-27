@@ -3,7 +3,7 @@ FROM python:3.11
 
 # Set environment variables
 ENV PYTHONUNBUFFERED=1  
-ENV PORT=5000  # Default PORT
+ENV PORT=5000
 
 # Set working directory
 WORKDIR /app
