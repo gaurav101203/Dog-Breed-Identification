@@ -18,7 +18,7 @@ app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 # Load labels
-labels_csv = pd.read_csv("D:\dog image\data\labels.csv")
+labels_csv = pd.read_csv(".\data\labels.csv")
 labels = labels_csv["breed"].to_numpy()
 unique_breeds = np.unique(labels)
 
